@@ -1,0 +1,9 @@
+Package: updatem-226
+Version: 1.2-1
+Architecture: all
+Maintainer: Michael <idigitallegacy@yandex.ru>
+Installed-Size: 31
+Section: unknown
+Priority: optional
+Homepage: https://github.com/idigitallegacy/updatem
+Description: A simple update manager for distro.

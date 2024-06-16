@@ -1,0 +1,15 @@
+Source: updatem-226
+Section: unknown
+Priority: optional
+Maintainer: Michael <idigitallegacy@yandex.ru>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Homepage: https://github.com/idigitallegacy/updatem
+Vcs-Browser: https://github.com/idigitallegacy/updatem
+Vcs-Git: https://github.com/idigitallegacy/updatem.git
+Rules-Requires-Root: no
+
+Package: updatem-226
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A simple update manager for distro.

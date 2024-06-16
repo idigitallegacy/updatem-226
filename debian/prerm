@@ -1,0 +1,42 @@
+#!/bin/bash
+# prerm script for updatem-226
+#
+# see: dh_installdeb(1)
+
+sudo systemctl disable updatem-226
+sudo systemctl stop updatem-226
+
+if [[ -d /usr/bin/updatem-226 ]]
+then
+	sudo rm -rf /usr/bin/updatem-226
+fi
+
+if [[ -d /var/log/updatem-226 ]]
+then
+	sudo rm -rf /var/log/updatem-226
+fi
+
+if [[ -d /etc/updatem-226 ]]
+then
+	sudo rm -rf /etc/updatem-226
+fi
+
+if [[ -f /etc/systemd/system/updatem-226.service ]]
+then
+	sudo rm -f /etc/systemd/system/updatem-226.service
+fi
+
+# summary of how this script can be called:
+#        * <prerm> `remove'
+#        * <old-prerm> `upgrade' <new-version>
+#        * <new-prerm> `failed-upgrade' <old-version>
+#        * <conflictor's-prerm> `remove' `in-favour' <package> <new-version>
+#        * <deconfigured's-prerm> `deconfigure' `in-favour'
+#          <package-being-installed> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see https://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+#DEBHELPER#
+
+exit 0

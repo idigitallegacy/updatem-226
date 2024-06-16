@@ -1,0 +1,13 @@
+[Unit]
+Description=Licey226 repo update manager daemon
+After=NetworkManager.service
+
+[Service]
+TimeoutStartSec=120
+Type=simple
+User=root
+WorkingDirectory=/usr/bin/updatem-226
+ExecStart=/usr/bin/updatem-226/update-executor.sh
+
+[Install]
+WantedBy=multi-user.target
